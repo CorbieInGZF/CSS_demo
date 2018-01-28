@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS文本</title>
+<style>
+h1{
+text-align:center;
+text-transform:uppercase;<!--lowercase-->
+text-decoration:underline;<!--overline/line-through-->
+color:#A7C942;}
+p{
+text-indent:50px;
+text-transform:justify;
+letter-spacing:3px;}
+a{
+text-decoration:none;}
+p.capitalize{text-transform:capitalize;}
+p.small{line-height:70%;}
+p.big{line-height:200%;}
+h2{word-spacing:30px;}
+h3{white-space:nowrap;}
+img.top{vertical-align:text-top;}
+img.bottom{vertical-align;text-bottom;}
+h4{text-shadow:2px 2px #FF0000;}
+div.ex1{direction:rtl;
+unicode-bidi:bidi-override;}
+</style>
+</head>
+<body>
+<div>默认书写方向。</div>
+<div class="ex1">从左向右书写。</div>
+<h4>Text-shadow测试</h4>
+<h6>一个<img src="text-align测试.jpg" alt="bilibili" width="270" height="50"/>默认对其图像。</p>
+<h6>一个<img class="top" src="text-align测试.jpg" alt="bilibili" width="270" height="50"/>text-top对其图像。</p>
+<h6>一个<img class="bottom" src="text-align测试.jpg" alt="bilibili" width="270" height="50"/>text-bottom对其图像。</p>
+<h3>
+这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+</h3>
+<h2>this is word spacing test.</h2> 
+<h1>text formatting</h1>
+<p>This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties.
+The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from the
+<a target="_blank" href="#">&quot;尝试一下&quot;</a> link.</p>
+<p class="capitalize">this is capitalize.</p>
+<p class="small">
+这是一个更小行高的段落。<br>
+这是一个更小行高的段落。<br>
+这是一个更小行高的段落。<br>
+这是一个更小行高的段落。<br>
+</p>
+<p class="big">
+这是一个更大行高的段落。<br>
+这是一个更大行高的段落。<br>
+这是一个更大行高的段落。<br>
+这是一个更大行高的段落。<br>
+</p>
+</body>
+</html>
