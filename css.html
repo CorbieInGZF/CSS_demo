@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS_demo(Corbie.com)</title>
+<style>
+<!--设置背景图像-->
+
+<!--内部样式-->
+#para1{text-align:center;color:red;}
+p.center{text-align:center;}
+h1{color:orange;text-align:center;}
+p{font-family:"Times New Roman";font-size:20px;}
+body{background-image:url('背景.jpg');background-color:#d0e4fe;}
+<!--多重样式类似继承,内部继承外部-->
+<!--外部样式-->
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+</style>
+</head>
+
+<body>
+<!--内联样式）Inline style > （内部样式）Internal style sheet >（外部样式）External style sheet > 浏览器默认样式-->
+
+
+<head>
+<!--外部样式 style.css-->
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<!--设置：h3{color:blue;}-->
+<style type="text/css">
+ /*内部样式*/
+ h3{color:green;}
+</style>
+</head>
+<body>
+  <h3 style="color:red;">测试！</h3><!--内联样式-->
+</body>
+<h1>CSS实例</h1>
+<p style="color:sienna;margin-left:20px">内联样式</p>
+<p id="para1">id选择器</p>
+<h1 class="center">class选择器(不受影响）</h1>
+<p class="center">收到影响</p>
+<p>段落</p>
+</body>
+</html>
