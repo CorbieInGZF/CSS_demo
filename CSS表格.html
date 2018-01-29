@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS表格</title>
+<style>
+<!--折叠边框-->
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid green;<!--实心绿色-->
+}
+table {width:100%;}
+th{height:50px;
+   background-color:green;
+   color:white;/*字色*/}
+td{
+	height:50px;
+    /*text-align:right;<!--表格单元中文字向右对齐-->*/
+	/*vertical-align:bottom;<!--垂直对其属性-->*/
+	padding:15px;<!--控制内容与边框之间的距离-->
+}
+caption{caption-side:bottom;}
+</style>
+</head>
+<body>
+<table>
+<caption>设置表格标题位置</caption>
+<tr>
+<th>FirstName</th>
+<th>LastName</th>
+</tr>
+<tr>
+<td>Peter</td>
+<td>Parker</td>
+</tr>
+<td>Allen</td>
+<td>Iverson</td>
+</tr>
+</table>
+</body>
+</html>
