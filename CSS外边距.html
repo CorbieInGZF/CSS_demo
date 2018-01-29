@@ -1,0 +1,41 @@
+<!--margin清除周围的元素（外边框）的区域。margin没有背景颜色，是完全透明的
+margin可以单独改变元素的上，下，左，右边距。也可以一次改变所有的属性。-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>CSS外边距</title> 
+<style>
+p
+{
+	background-color:yellow;
+}
+p.margin
+{
+	margin-top:100px;
+	margin-bottom:100px;
+	margin-right:50px;
+	margin-left:50px;
+}
+p.sim4{margin:25px 50px 75px 100px;}/*顺时针*/
+p.sim3{margin:25px 50px 75px;}/*上（左右）下*/
+p.sim2{margin:25px 50px;}/*(上下）（左右）*/
+p.sim1{margin:25px}/*四周*/
+p.cm{margin-top:2cm;}
+p.bottommargin{margin-bottom:25%;}
+</style>
+</head>
+
+<body>
+<p>这是一个没有指定边距大小的段落。</p>
+<p class="margin">这是一个指定边距大小的段落。</p>
+<p class="sim4">简写Margin属性。</p>
+<!--后面这3种貌似失效了-->
+<p class="sim3">简写Margin属性。</p>
+<p class="sim2">简写Margin属性。</p>
+<p class="sim1">简写Margin属性。</p>
+<p class="cm">用cm设置margin。</p>
+<p class="bottommargin">用百分比设置。</p>
+</body>
+
+</html>
