@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>CSS display&visibility</title> 
+<style>
+h1.hidden {visibility:hidden;}/*visibility属性还会保留元素应有空间，对布局仍有影响*/
+h2.hidden{display:none;}/*元素和空间一同隐藏消失*/
+/*可以更改内联元素和块元素，反之亦然，可以使页面看起来是以一种特定的方式组合，并仍然遵循web标准。*/
+li{display:inline;}
+span{display:block;}/*不允许它有内部嵌套元素*/
+table,th,td{border:1px solid black;}
+tr.collapse{visibility:collapse;}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr class="collapse">
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+<h3>Nirvana</h3>
+<span>Record: MTV Unplugged in New York</span>
+<span>Year: 1993</span>
+<h3>Radiohead</h3>
+<span>Record: OK Computer</span>
+<span>Year: 1997</span>
+<ul>
+<li><a href="http://www.runoob.com/html/html-tutorial.html" target="_blank">HTML</a></li>
+<li><a href="http://www.runoob.com/css/css-tutorial.html" target="_blank">CSS</a></li>
+<li><a href="http://www.runoob.com/js/js-tutorial.html" target="_blank">Javascript</a></li>
+<li><a href="http://www.runoob.com/xml/xml-tutorial.html" target="_blank">XML</a></li>
+</ul>
+<P>链表变为水平显示:</p>
+<h1>这是一个可见标题</h1>
+<h1 class="hidden">这是一个隐藏标题</h1>
+<p>注意, 实例中的隐藏标题仍然占用空间。</p>
+<h2 class="hidden">这是一个隐藏标题</h2>
+<p>注意, 实例中的隐藏标题不占用空间。</p>
+</body>
+</html>

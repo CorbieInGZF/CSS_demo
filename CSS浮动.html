@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>CSS浮动</title>
+<style>
+img.simple{float:right;}
+img.border{float:right;
+	border:1px dotted black;
+	margin:0px 0px 15px 20px;}
+.thumbnail{float:left;
+           width:110px;
+		   height:90x;
+		   margin:5px;}
+/*元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性。
+clear 属性指定元素两侧不能出现浮动元素。
+使用 clear 属性往文本中添加图片廊*/
+.text_line{clear:both;
+	       margin-bottom:2px;}
+</style>
+</head>
+<body>
+<p>
+	在下面的段落中,图像将向右浮动。黑色虚线边界添加到图像。
+我们还添加了边缘的0 px的顶部和右侧 margin,15 px底部margin,和20 px左侧的margin的图像。使得文本远离图片:</p>
+<p>
+<img class="border" src="雪花背景.jpg" width="95" height="84" />
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p>
+
+<p>在下面的段落中，我们添加了一个 <b>float:right</b> 的图片。导致图片将会浮动在段落的右边。</p>
+<p>
+<img class="simple" src="雪花背景.jpg" width="95" height="84" />
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+这是一些文本。这是一些文本。这是一些文本。
+</p>
+
+<h3>下列图片涉及相邻浮动元素的情况。</h3>
+<p>调整窗口大小会发现相邻浮动元素之间会发生什么。</p>
+<img class="thumbnail" src="背景.jpg" width=="107" height="90">
+<img class="thumbnail" src="雪花背景.jpg" width=="107" height="90">
+<img class="thumbnail" src="timg.jpg" width=="107" height="90">
+<img class="thumbnail" src="j&w.jpg" width=="107" height="90">
+<h3 class="text_line">第二行</h3>
+<img class="thumbnail" src="背景.jpg" width=="107" height="90">
+<img class="thumbnail" src="雪花背景.jpg" width=="107" height="90">
+<img class="thumbnail" src="timg.jpg" width=="107" height="90">
+<img class="thumbnail" src="j&w.jpg" width=="107" height="90">
+</body>
+</html>
