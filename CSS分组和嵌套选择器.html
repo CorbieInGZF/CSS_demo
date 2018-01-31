@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>CSS分组和嵌套选择器</title> 
+<style>
+h1,h2,p/*分组选择器*/
+{
+	color:green;
+}
+h3{color:blue;
+   text-align:center;}
+.marked{background-color:red;}
+.marked h3{color:white;}
+</style>
+</head>
+<body>
+<h1>Hello World!</h1>
+<h2>Smaller heading!</h2>
+<p>This is a paragraph.</p>
+<h3>蓝色段落，居中对其。</h3>
+<div class="marked"><h3>红色段落。</h3></div>
+<h3>所有 class="marked"元素内的h3元素指定一个样式，但有不同的文本颜色。</h3>
+<p class="marked">红底绿字</p>
+</body>
+</html>
