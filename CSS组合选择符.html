@@ -1,0 +1,57 @@
+<!--后代选取器(以空格分隔)
+    子元素选择器(以大于号分隔）
+    相邻兄弟选择器（以加号分隔）
+    普通兄弟选择器（以破折号分隔）-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>CSS组合选择器</title> 
+<style>
+div.select1 p{background-color:yellow;}/*后代选取器*/
+div.select2>p{background-color:green;}/*子选择器*/
+div.select3+p.select3{background-color:pink;}/*相邻兄弟选择器*/
+div.select4~p.select4{background-color:blue;}/*后续兄弟选择器*/
+</style>
+</head>
+<body>
+<p class="select4">之前段落，不会添加背景颜色。</p>
+<div class="select4">
+<p class="select4">段落 1。 在 div 中。</p>
+<p class="select4">段落 2。 在 div 中。</p>
+</div>
+
+<p class="select4">段落 3。不在 div 中。</p>
+<p class="select4">段落 4。不在 div 中。</p>
+
+<h1>相邻兄弟选择器</h1>
+<div class="select3">
+<h2>My name is Donald</h2>
+<p class="select3">I live in Duckburg.</p>
+</div>
+
+<p class="select3">My best friend is Mickey.</p>
+<!--显示div后紧跟的第一个p.-->
+<p class="select3">I will not be styled.</p>
+<h1>子选择器</h1>
+<div class="select2">
+<h2>My name is Donald</h2>
+<p>I live in Duckburg.</p>
+</div>
+
+<div class="select2">
+<span><p>I will not be styled.</p></span><!--只能在一级之下。-->
+</div>
+
+<p>My best friend is Mickey.</p>
+
+<div class="select1">
+<p>段落 1。 在 div 中。</p>
+<p>段落 2。 在 div 中。</p>
+</div>
+
+<p>段落 3。不在 div 中。</p>
+<p>段落 4。不在 div 中。</p>
+
+</body>
+</html>
