@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS提示框</title>
+</head>
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;/*底部虚线*/}
+
+.tooltip .tooltiptextr {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 1;/*显示在前面*/
+	/*右侧提示*/
+	top:-5px;/*使用数字 5 因为提示文本的顶部和底部的内边距（padding）是 5px*/
+	left:105px;
+	/*淡入效果*/
+	opacity:0;
+	transition: opacity 1s;
+}
+.tooltip .tooltiptextt {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 1;/*显示在前面*/
+	/*顶部提示*/
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+	/*如果你想要提示工具显示在头部和底部。我们需要使用 margin-left 属性，并设置为 -60px。
+	这个数字计算来源是使用宽度的一半来居中对齐，即： width/2 (120/2 = 60)*/
+    opacity:0;
+	transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptextr {
+    visibility: visible;
+	opacity:1;
+}
+.tooltip:hover .tooltiptextt {
+    visibility: visible;
+	opacity:1;
+}
+/*添加一个箭头*/
+.tooltip .tooltiptextt::after{content:" ";
+                              position:absolute;
+							  /*显示在底部*/
+							  top:100%;
+							  /*居中箭头*/
+							  left:50%;
+							  margin-left:-5px;
+							  border-width:5px;
+							  border-style:solid;
+							  /*border-color 用于将内容转换为箭头。设置顶部边框为黑色，其他是透明的。
+							  如果设置了其他的也是黑色则会显示为一个黑色的四边形。*/
+							  border-color:black transparent transparent transparent;}
+.tooltip .tooltiptextr::after {content: " ";
+                              position: absolute;
+                              top: 50%;
+                              right: 100%; /* 提示工具右侧 */
+                              margin-top: -5px;
+                              border-width: 5px;
+                              border-style: solid;
+                              border-color:transparent  black transparent transparent ;
+}
+</style>
+<body style="text-align:center;">
+
+<div class="tooltip">鼠标移动到这
+  <span class="tooltiptextr">提示文本(右侧提示)</span>
+</div>
+<br>
+<div class="tooltip">鼠标移动到这
+  <span class="tooltiptextt">提示文本(顶部提示)</span>
+</div>
+
+</body>
+</html>
