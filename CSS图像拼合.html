@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>CSS图像拼合</title>  
+<style>
+img.home {
+    width: 46px;
+    height: 44px;
+    background: url(http://www.runoob.com/images/img_navsprites.gif) 0 0;
+}
+
+img.next {
+    width: 43px;
+    height: 44px;
+    background: url(http://www.runoob.com/images/img_navsprites.gif) -91px 0;
+}
+
+/*创建一个导航列表*/
+#navlist{position:relative;}/*位置设置相对定位，让里面的绝对定位*/
+#navlist li{margin:0;padding:0;list-style:none;position:absolute;top:0;}
+#navlist li, #navlist a{height:44px;display:block;}
+
+#home{left:0px;width:46px;}
+#home{background:url(http://www.runoob.com/images/img_navsprites.gif) 0 0;}
+
+#prev{left:63px;width:43px;}
+#prev{background:url(http://www.runoob.com/images/img_navsprites.gif) -47px 0;}
+
+#next{left:129px;width:43px;}
+#next{background:url(http://www.runoob.com/images/img_navsprites.gif) -91px 0;}
+
+/*悬停效果*/
+#home a:hover{background: url(http://www.runoob.com/images/img_navsprites_hover.gif) 0 -45px;}
+#prev a:hover{background: url(http://www.runoob.com/images/img_navsprites_hover.gif) -47px -45px;}
+#next a:hover{background: url(http://www.runoob.com/images/img_navsprites_hover.gif) -91px -45px;}
+</style>
+</head>
+<body>
+
+<img class="home" src="img_trans.gif"><br><br>
+<img class="next" src="img_trans.gif">
+<!--因为不能为空,src属性只定义了一个小的透明图像。
+显示的图像将是我们在CSS中指定的背景图像-->
+
+<ul id="navlist">
+  <li id="home"><a href="/"></a></li>
+  <li id="prev"><a href="/css/"></a></li>
+  <li id="next"><a href="/css/"></a></li>
+</ul>
+</body>
+</html>

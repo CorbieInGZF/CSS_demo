@@ -1,0 +1,24 @@
+<html>
+<head>
+<style>
+/*浏览器屏幕上显示一个14像素的Verdana字体样式。
+但是如果页面打印，将是10个像素的Times字体*/
+@media screen
+{
+    p.test {font-family:verdana,sans-serif;font-size:14px;}
+}
+@media print
+{
+    p.test {font-family:times,serif;font-size:10px;}
+}
+@media screen,print
+{
+    p.test {font-weight:bold;}
+}
+</style>
+</head>
+
+<body>
+<p>Media Types</P>
+</body>
+</html>
